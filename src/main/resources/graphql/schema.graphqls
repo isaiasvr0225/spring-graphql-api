@@ -1,0 +1,24 @@
+type Query{
+    findStudentById(studentId: String!): Student
+    findAllStudents: [Student]
+}
+
+type Mutation{
+    createStudent(studentInput: StudentInput): String
+    deleteStudentById(studentId: String!): String
+}
+
+type Student{
+    id: ID!
+    name: String!
+    age: Int!
+    email: String!
+    phone: String!
+}
+
+input StudentInput{
+    name: String!
+    age: Int!
+    email: String!
+    phone: String!
+}

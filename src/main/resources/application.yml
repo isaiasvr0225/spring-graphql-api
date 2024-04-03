@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: spring-graphql-api
+  datasource:
+    url: jdbc:mysql://localhost:3306/${DB_NAME}?useSSL=false
+    username: ${DB_USER}
+    password: ${DB_PASS}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        show_sql: true
+    hibernate:
+      ddl-auto: create
+  graphql:
+    graphiql:
+      enabled: true
